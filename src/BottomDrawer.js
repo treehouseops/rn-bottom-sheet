@@ -103,6 +103,9 @@ export default class BottomDrawer extends Component {
 
     this.state = { currentPosition: this.props.startUp ? this.UP_POSITION : this.DOWN_POSITION, currentState: this.props.startUp ? UP_STATE : DOWN_STATE };
 
+    this.toggleDrawer =  () =>  this.setState({
+      currentState: this.state.currentState === UP_STATE ? DOWN_STATE : UP_STATE
+    })
   }
 
   /**
